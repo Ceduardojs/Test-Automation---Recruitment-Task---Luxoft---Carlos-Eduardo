@@ -14,17 +14,11 @@ public class GitHubAutoTest {
 
 	@Test
 	public void testLinks() throws InterruptedException {
-		// Create a new instance of the Firefox driver
-        // Notice that the remainder of the code relies on the interface, 
-        // not the implementation.
+		
         WebDriver driver = new FirefoxDriver();
 
-        // And now use this to visit Google
         driver.get("https://github.com");
-        // Alternatively the same thing can be done like this
-        // driver.navigate().to("http://www.google.com");
 
-        // Find the text input element by its name
         WebElement element = driver.findElement(By.linkText("Explore"));
      
         if(element.isEnabled() ){
@@ -60,11 +54,11 @@ public class GitHubAutoTest {
         
         if(element.isEnabled() ){
                 	
-        	System.out.println("Issues");
+        	System.out.println("ok Issues");
                	
         }
         
-        //Close the browser
+   
         driver.quit();
     }
 	
